@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cron-example
+  namespace: ingress-basic
+spec:
+  jobTemplate:
+	metadata:
+      name: cron-example
+    spec:
+      template:
+        spec:
+          containers:
+          - image: cron-example
+            imagePullPolicy: Never
+            name: cron-example
+            resources: {}
+          restartPolicy: OnFailure
+schedule: '*/1 * * * *'
