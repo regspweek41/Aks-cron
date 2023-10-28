@@ -6,7 +6,7 @@ metadata:
 spec:
   jobTemplate:
 	metadata:
-      name: cron-example
+    name: cron-example
     spec:
       template:
         spec:
