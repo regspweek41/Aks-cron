@@ -11,7 +11,7 @@ spec:
       template:
         spec:
           containers:
-          - image: cron-example
+          - image: projectacr23.azurecr.io/python/job:#{buildNo}#
             imagePullPolicy: Never
             name: cron-example
             resources: {}
